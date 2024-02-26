@@ -16,13 +16,40 @@
     <div id="mydiv"></div>
 
     <script type="text/babel">
+        //objeto <Hello />
         function Hello() {
             return <h1>Hello World!</h1>;
         }
 
+        function Nome() {
+            return <h2>Sofia</h2>;
+        }
+
+        function Sobrenome() {
+            return <h2>Conchon</h2>;
+        }
+
+        function Endereco() {
+            return <h2>Cambé-Centro</h2>;
+        }
+
+        //variável Hello2
+        const Hello2= (
+            <h2> Hello2 </h2> 
+        );
+
         const container = document.getElementById('mydiv');
         const root = ReactDOM.createRoot(container);
-        root.render(<Hello />)
+        root.render(
+            <React.StrictMode>
+                < Nome />
+                < Sobrenome />
+                < Endereco />
+                </React.StrictMode>
+        )
+        //root.render(< Sesc />); //renderizar via objeto (retornavel de funcão)
+        //root.render(Hello2); //renderizar via variável (contém o objeto a ser renderizado)
+       // root.render(<h1> Teste </h1>); //renderização direto no renderizador 
     </script>
 
 </body>
